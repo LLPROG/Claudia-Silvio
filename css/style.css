@@ -1,0 +1,39 @@
+[class*="col"] {
+    /* border: 1px solid black; */
+}
+
+ul {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgb(131, 120, 120);
+
+
+    transition: 2s;
+}
+
+
+.hidden-nav .hamb-inner {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    transform: rotate(180deg);
+    cursor: pointer;
+
+}
+
+.hidden-nav i::before {
+    font-size: 2.5em;
+    color: white;
+}
+
+.hamb i::before {
+    font-size: 2.5em;
+}
+
+.hamb {
+    cursor: pointer;
+}
