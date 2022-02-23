@@ -4,36 +4,56 @@
 
 ul {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: absolute;
     top: 0;
-    left: 0;
-    height: 100%;
+    left: -100%;
     background: rgb(131, 120, 120);
-
-
-    transition: 2s;
+    transition: 0.5s linear;
 }
 
+.show-menu {
+    left: 0;
+}
 
-.hidden-nav .hamb-inner {
+.rotate-icon {
+    transform: rotate(180deg);
+}
+
+.hamb {
+    padding-right: 10px;
+    cursor: pointer;
     position: absolute;
     top: 0;
-    right: 10px;
-    transform: rotate(180deg);
-    cursor: pointer;
+    right: 30px;
 
+    transition: 0.5s;
 }
 
-.hidden-nav i::before {
-    font-size: 2.5em;
-    color: white;
-}
+
 
 .hamb i::before {
     font-size: 2.5em;
 }
 
-.hamb {
+.hidden-nav .hamb-inner {
+    padding-right: 10px;
+
+    position: absolute;
+    top: 0;
+    right: 30px;
+    transform: rotate(180deg);
     cursor: pointer;
+    opacity: 0;
+    transition: 0.5s linear;
+    transition-delay: 0.5s
+}
+
+.hidden-nav .hamb-inner.icon-hidden {
+    opacity: 1;
+}
+
+.hidden-nav i::before {
+    font-size: 2.5em;
+    color: white;
 }
